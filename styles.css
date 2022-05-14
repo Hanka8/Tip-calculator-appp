@@ -1,0 +1,227 @@
+:root{
+  --cyan: hsl(172, 67%, 45%);
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkCyan: hsl(186, 14%, 43%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --lightCyan: hsl(189, 41%, 97%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  min-height: 100vh;
+  background-color: var(--lightGrayishCyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header {
+  margin-top: 8%;
+}
+
+
+.card {
+  margin-top: 5.5%;
+  border-radius: 25px;
+  background-color: white;
+  color: var(--veryDarkCyan);
+  padding: 2.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 59%;
+  height: auto;
+}
+
+.box1 {
+  padding-right: 5%;
+  margin-left: 1.4%;
+  margin-top: 1%;
+  width: 45%;
+}
+
+.box2 {
+  border-radius: 15px;
+  padding: 5%;
+  background-color: var(--veryDarkCyan);
+  color: white;
+  width: 38%;
+}
+
+.label {
+  font-size: 1rem;
+}
+
+.bill, .numberPeople {
+  outline: none;
+  border: none;
+  text-align: right;
+  background-color: var(--lightCyan);
+  padding-right: 8%;
+  margin-top: 1%;
+  margin-bottom: 9%;
+  border-radius: 10px;
+}
+
+.billInput, .numberPeopleInput {
+  outline: none;
+  border: none;
+  background-color: var(--lightCyan);
+  text-align: right;
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  width: 100%;
+  color: var(--grayishCyan);
+  padding: 2.5%;
+  font-size: 1.5rem;
+  font-family: 'Space Mono', monospace;
+  border-radius: 10px;
+}
+
+.billInput {
+  background-image: url(images/icon-dollar.svg);
+}
+
+.numberPeopleInput {
+  background-image: url(images/icon-person.svg);
+}
+
+.tipGrid {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  row-gap: 13%;
+  column-gap: 3.5%;
+  margin-bottom: 20%;
+  margin-top: 5%;
+  height: 28%;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: var(--veryDarkCyan);
+  color: white;
+  padding: 5%;
+  font-size: 1.5rem;
+  font-family: 'Space Mono', monospace;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.custom {
+  background-color: var(--lightGrayishCyan);
+  color: var(--veryDarkCyan);
+}
+
+
+.tip, .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8%;
+}
+
+.person {
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+.amount {
+  color: var(--cyan);
+  font-size: 3rem;
+  position: relative;
+  left: 2%;
+}
+
+.label2 {
+  width: 35%;
+  margin-top: 3%;
+  line-height: 1.3;
+}
+
+.resetBtn {
+  margin-top: 30%;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5%;
+  background-color: hsl(180, 40%, 30%);
+  color: var(--veryDarkCyan);
+  text-transform: uppercase;
+  border: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+}
+
+#errorText + .label {
+  margin-bottom: 3%;
+}
+
+.numberPeople:focus-within {
+  border: 3px solid #b5806f;
+}
+
+.numberPeopleInput:focus, .billInput:focus{
+  color: var(--veryDarkCyan);
+}
+
+.bill:focus-within {
+  border: 3px solid var(--cyan);
+}
+
+.tipBtn:hover {
+  background-color: #9ee8df;
+  color: var(--veryDarkCyan);
+  transition: 0.3s ease;
+}
+
+.custom {
+  outline: none;
+  text-align: right;
+}
+
+.custom:hover {
+  border: 3px solid var(--cyan);
+}
+
+.custom:focus-within {
+  border: 3px solid var(--cyan);
+  color: var(--veryDarkCyan);
+  background-color: var(--lightCyan);
+}
+
+
+/* ######### JS TOGGLES ########### */
+
+.hide {
+  display: none;
+}
+
+.isZeroText {
+  display: block;
+  color: #b5806f;
+  text-align: right;
+  float: right;
+  font-size: 1rem;
+}
+
+.isZero {
+  border: 3px solid #b5806f;
+}
+
+.resetBtnActive {
+  background-color: #9ee8df;
+}
+
+
+/* ######### JS TOGGLES ########### */

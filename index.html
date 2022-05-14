@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="images/logo.svg" alt=".logo-splitter">
+  </header>
+  <main class="card">
+
+    <div class="box1">
+      <h1 class="label">Bill</h1>
+      <form class="bill" action="index.html" method="post">
+        <input class="billInput" type="text" name="bill" value="" placeholder="0">
+      </form>
+      <h1 class="label">Select tip %</h1>
+      <div class="tipGrid">
+        <button class="tipBtn btn" type="button" name="button">5%</button>
+        <button class="tipBtn btn" type="button" name="button">10%</button>
+        <button class="tipBtn btn" type="button" name="button">15%</button>
+        <button class="tipBtn btn" type="button" name="button">25%</button>
+        <button class="tipBtn btn" type="button" name="button">50%</button>
+        <input class="btn custom" type="text" name="custom-tip-value" value="">
+      </div>
+      <p id="errorText" class="hide">Can´t be zero</p>
+      <h1 class="label">Number of people</h1>
+      <form class="numberPeople" action="index.html" method="post">
+        <input class="numberPeopleInput" type="text" name="numberOfPeople" value="" placeholder="0">
+      </form>
+
+    </div>
+
+    <div class="box2">
+      <div class="tip">
+        <h1 class="label label2">Tip Amount <span class="person">/ person</span></h1>
+        <p class="amount" id="tipAmount">$0.00</p>
+      </div>
+      <div class="total">
+        <h1 class="label label2">Total <span class="person">/ person</span></h1>
+        <p class="amount" id="tipTotal">$0.00</p>
+      </div>
+      <button class="resetBtn" type="button" name="button">reset</button>
+    </div>
+
+  </main>
+<script src="app.js"></script>
+</body>
+</html>
