@@ -118,12 +118,6 @@ header {
   box-sizing: border-box;
 }
 
-.custom {
-  background-color: var(--lightGrayishCyan);
-  color: var(--veryDarkCyan);
-}
-
-
 .tip, .total {
   display: flex;
   justify-content: space-between;
@@ -185,7 +179,15 @@ header {
   transition: 0.3s ease;
 }
 
+.custom::placeholder {
+  color: var(--veryDarkCyan);
+  opacity: 1;
+  text-align: center;
+}
+
 .custom {
+  background-color: var(--lightCyan);
+  color: var(--veryDarkCyan);
   outline: none;
   text-align: right;
 }
@@ -196,8 +198,10 @@ header {
 
 .custom:focus-within {
   border: 3px solid var(--cyan);
-  color: var(--veryDarkCyan);
-  background-color: var(--lightCyan);
+}
+
+.custom:focus-within::placeholder {
+  opacity: 0.5;
 }
 
 
@@ -225,3 +229,30 @@ header {
 
 
 /* ######### JS TOGGLES ########### */
+
+@media (max-width: 375px) {
+  .card {
+    padding: 10% 0;
+    width: 100%;
+    flex-direction: column;
+  }
+  .box1 {
+    width: 80%;
+  }
+  .box2 {
+    padding: 8%;
+    box-sizing: border-box;
+    width: 85%;
+  }
+  .resetBtn {
+    margin-top: 5%;
+    padding: 3%;
+  }
+  .amount {
+    font-size: 2rem;
+  }
+  .tipGrid {
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  }
+
+}
